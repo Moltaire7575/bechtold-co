@@ -9,13 +9,13 @@ heroImage: "/inner-space/astronaut-bowtie.svg"
 draft: false
 ---
 
-I went into a psychedelic journey carrying the kind of internal weight you don’t post about.
+I went into a **psychedelic** journey carrying the kind of internal weight you don’t post about.
 
 Not a single, clean problem. More like a knot: old pressure, recent stress, unfinished emotions—all of it mashed together into that familiar feeling of *something in me isn’t settled.*
 
 I wasn’t looking for a vision. I was looking for **space**.
 
-At first it stayed personal. I kept circling the same themes, the same memories, the same self‑talk. Then a voice—not exactly audible, more like a message with authority—started repeating a single sentence.
+At first it stayed personal. I kept circling the same themes, the same memories, the same self‑talk. Then a voice—not exactly audible, more like a message with authority—started repeating one sentence:
 
 *You’ve been through this before.*
 
@@ -53,14 +53,8 @@ And when I came back, the takeaway wasn’t “I am the universe.” It was more
 
 > Awareness can wear a lot of costumes.
 
-Which means my everyday identity—my personality, my story, my roles—is not the whole of what I am.
-
-It’s a character.
-
-And there’s something in me that can notice the character.
-
-## The character I wear
-Most of the time, I live like I’m the character:
+## The player and the character (in plain language)
+Most of the time, I live like I’m the identity:
 
 - the name
 - the preferences
@@ -70,19 +64,24 @@ Most of the time, I live like I’m the character:
 - the fears that feel permanent
 - the mental autobiography that insists it’s the whole truth
 
-The character is real in the same way a job title is real. Useful. Operable. Socially legible.
+That identity isn’t fake. It’s useful.
 
-But it isn’t the whole sky.
+But that night reminded me there’s something else here too: the part of me that can **notice** the identity.
 
-## The player that can notice the character
-Every so often—through meditation, a hike, a dream, or an altered state—the character loosens and something wider becomes obvious.
+Not a belief. Not a spiritual badge. Just a simple fact you can test:
 
-The cleanest way I know to describe it is this:
+- I can notice my thoughts.
+- I can notice my emotions.
+- I can notice my self‑image.
 
-- **The character** is the identity (story, roles, personality).
-- **The player** is the awareness that can *notice* the character.
+So I’m not identical to any of them.
 
-That “noticing” is subtle. It doesn’t arrive with fireworks. It’s more like stepping back half an inch inside your own experience and realizing you’ve been white‑knuckling the steering wheel.
+If we want a metaphor, that’s what I mean by “the player and the character”:
+
+- the *character* is the identity doing its thing
+- the *player* is the awareness that can hold it without drowning in it
+
+When that clicks—even briefly—life gets roomier. The same stressors exist, but they stop feeling like a total verdict on who I am.
 
 ## Dreams: evidence that “I” is more flexible than I admit
 Dreams make this hard to ignore.
@@ -122,24 +121,24 @@ I just need to stop treating it like it’s the only thing in the room.
 Try this once today. It’s small on purpose.
 
 1. **Name the character**
-   
+
    Silently: *“Here is the character: me.”* Notice the self‑image you’re carrying right now.
 
 2. **Find the player**
-   
+
    Ask: *“What is aware of this character right now?”* Don’t answer—just notice. Even if you only notice blankness, that counts.
 
 3. **Shift the language**
-   
+
    - “I’m aware of anxiety” instead of “I’m anxious.”
    - “I’m aware of thoughts about failing” instead of “I’m failing.”
 
 4. **Tool vs. truth**
-   
+
    *Identity is a tool. Awareness is the space it appears in.*
 
 5. **One tiny test (1 hour)**
-   
+
    For the next hour, treat thoughts like subtitles: you can read them without obeying them.
 
 ## Closing

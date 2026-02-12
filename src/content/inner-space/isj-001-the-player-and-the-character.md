@@ -9,13 +9,55 @@ heroImage: "/inner-space/astronaut-bowtie.svg"
 draft: false
 ---
 
-There are moments—sometimes in meditation, sometimes mid‑hike when my lungs are burning and my brain finally stops narrating—where something quietly shocking shows up:
+I went into a psychedelic journey carrying the kind of internal weight you don’t post about.
 
-I’m not *just* this.
+Not a single, clean problem. More like a knot: old pressure, recent stress, unfinished emotions—all of it mashed together into that familiar feeling of *something in me isn’t settled.*
 
-Not just this face, this story, this personality, this body moving through space like a single point of awareness glued behind my eyes.
+I wasn’t looking for a vision. I was looking for **space**.
 
-It’s more like consciousness has **range**. And most days, I spend that range pretending I’m the one rigid thing I can name.
+At first it stayed personal. I kept circling the same themes, the same memories, the same self‑talk. Then a voice—not exactly audible, more like a message with authority—started repeating a single sentence.
+
+*You’ve been through this before.*
+
+Again.
+
+*You’ve been through this before.*
+
+Not gentle. Not mystical. Almost irritating in how matter‑of‑fact it was. Like a coach who refuses to indulge your panic.
+
+And with each repetition, my mind started pulling receipts.
+
+Not in a dramatic montage way. In a blunt, documentary way: **here’s the time you thought you were done. Here’s the time you adapted. Here’s the time you kept walking anyway.**
+
+The point wasn’t “look how tough you are.” The point was simpler—and strangely relieving:
+
+This moment isn’t new. This feeling isn’t proof. It’s a pattern you’ve already outlived.
+
+Then the whole thing shifted.
+
+The “me” I normally inhabit—this name, this face, this storyline—started to feel optional.
+
+My sense of identity slid into other forms, almost like trying on masks:
+
+- an animal moving by instinct
+- something flying
+- something smaller: bacteria, amoeba, plant life
+- smaller still: cells doing their quiet work
+- then chemistry—reactions, molecules, forces
+- then space itself as a kind of presence
+- then something like a universe
+
+None of it lasted long—seconds at most—but each one felt *real* while it was happening.
+
+And when I came back, the takeaway wasn’t “I am the universe.” It was more practical than that:
+
+> Awareness can wear a lot of costumes.
+
+Which means my everyday identity—my personality, my story, my roles—is not the whole of what I am.
+
+It’s a character.
+
+And there’s something in me that can notice the character.
 
 ## The character I wear
 Most of the time, I live like I’m the character:
@@ -33,7 +75,7 @@ The character is real in the same way a job title is real. Useful. Operable. Soc
 But it isn’t the whole sky.
 
 ## The player that can notice the character
-Every so often, identity loosens for a second and something wider becomes obvious.
+Every so often—through meditation, a hike, a dream, or an altered state—the character loosens and something wider becomes obvious.
 
 The cleanest way I know to describe it is this:
 

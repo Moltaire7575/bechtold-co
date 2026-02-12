@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Ancient Wisdom — bechtold.co"
+	description="Charter and current workflow for Steve’s self-managing Ancient Wisdom / Mindset pipeline."
+>
+	<section class="mx-auto max-w-6xl px-4 py-16">
+		<header>
+			<p class="text-xs font-medium tracking-widest text-text-muted">PROJECT</p>
+			<h1 class="mt-3 font-display text-3xl text-text">Ancient Wisdom / Mindset Pipeline</h1>
+			<p class="mt-3 max-w-3xl text-text-muted">
+				Charter + current state + workflow for a self-managing wisdom feed (full passages with one-tap
+				decisions that tune future sends).
+			</p>
+		</header>
+
+		<div class="mt-10 grid gap-6 md:grid-cols-3">
+			<div class="rounded-2xl border border-white/10 bg-panel p-6 md:col-span-2">
+				<h2 class="font-display text-lg text-text">Mission (Outcome)</h2>
+				<ul class="mt-4 space-y-2 text-sm text-text-muted">
+					<li>
+						Create a daily/weekly “wisdom” feed that is experiential + relatable (not preachy).
+					</li>
+					<li>Biased toward eastern philosophy / mysticism (Buddhism/Daoism/etc.).</li>
+					<li>Includes full passages (bounded, but real excerpts), not one-liners.</li>
+					<li>
+						Uses one-tap decisions (Approve/Hold/Reject/Archive) to learn Steve’s taste and
+						self-manage selection over time.
+					</li>
+				</ul>
+			</div>
+
+			<div class="rounded-2xl border border-white/10 bg-panel p-6">
+				<h2 class="font-display text-lg text-text">Step 0 (Current)</h2>
+				<p class="mt-3 text-sm text-text-muted">
+					On schedule, send <span class="text-text">4 passages</span> to
+					<span class="text-text">enpointecoaching@gmail.com</span> with source attribution + links where
+					possible.
+				</p>
+				<p class="mt-3 text-sm text-text-muted">
+					Each passage includes one-tap buttons:
+					<span class="text-text">Approve / Hold / Reject / Archive</span>.
+				</p>
+			</div>
+		</div>
+
+		<section class="mt-12">
+			<h2 class="font-display text-2xl text-text">Decision meaning (as defined by Steve)</h2>
+			<div class="mt-5 overflow-hidden rounded-2xl border border-white/10">
+				<div class="grid gap-px bg-white/10 md:grid-cols-2">
+					<div class="bg-panel p-5">
+						<h3 class="text-sm font-semibold text-text">APPROVE</h3>
+						<p class="mt-2 text-sm text-text-muted">
+							More like this (increase weight for tradition/source/style).
+						</p>
+					</div>
+					<div class="bg-panel p-5">
+						<h3 class="text-sm font-semibold text-text">HOLD</h3>
+						<p class="mt-2 text-sm text-text-muted">
+							Waiting bin; recirculate later (cooldown).
+						</p>
+					</div>
+					<div class="bg-panel p-5">
+						<h3 class="text-sm font-semibold text-text">ARCHIVE</h3>
+						<p class="mt-2 text-sm text-text-muted">
+							“I liked it, but I’m not going to use it” (preference signal; don’t resurface).
+						</p>
+					</div>
+					<div class="bg-panel p-5">
+						<h3 class="text-sm font-semibold text-text">REJECT</h3>
+						<p class="mt-2 text-sm text-text-muted">
+							Not my taste (preference signal; don’t resurface).
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-12 grid gap-8 md:grid-cols-2">
+			<div>
+				<h2 class="font-display text-2xl text-text">What’s implemented (real code, real sends)</h2>
+				<p class="mt-3 text-sm text-text-muted">
+					Generators + senders exist on the Dell (OpenClaw workspace):
+				</p>
+				<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+					<li><code class="text-text">tools/ancient-wisdom.mjs</code> — generates email content</li>
+					<li><code class="text-text">tools/run-ancient-wisdom.ps1</code> — runs generator + sends email</li>
+					<li><code class="text-text">tools/send-email.mjs</code> — email sender</li>
+					<li><code class="text-text">tools/wisdom-corpus.json</code> — current corpus (expandable)</li>
+				</ul>
+
+				<h3 class="mt-8 font-display text-xl text-text">Cron schedule</h3>
+				<p class="mt-3 text-sm text-text-muted">
+					Scheduled <span class="text-text">M/W/F 6:30am CT</span> and runs as an actual worker (not a
+					reminder).
+				</p>
+			</div>
+
+			<div>
+				<h2 class="font-display text-2xl text-text">Approvals infrastructure</h2>
+				<p class="mt-3 text-sm text-text-muted">
+					Same Apps Script endpoint as Scientific Research approvals.
+				</p>
+				<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+					<li><span class="text-text">kind</span> = <code class="text-text">ancient_wisdom</code></li>
+					<li><span class="text-text">actions</span> = approve / hold / reject / archive</li>
+					<li>
+						Depends on Script property <code class="text-text">APPROVAL_TOKEN</code> (URL-safe)
+					</li>
+					<li>
+						Dell env var <code class="text-text">APPROVAL_ACTIONS_BASE_URL</code>
+					</li>
+				</ul>
+
+				<h3 class="mt-8 font-display text-xl text-text">Known issues + current fix status</h3>
+				<ol class="mt-4 list-decimal space-y-4 pl-5 text-sm text-text-muted">
+					<li>
+						<span class="text-text">iPhone taps sometimes show “Google Drive unable to open”.</span>
+						<div class="mt-2">
+							Cause: Apps Script HTML sandbox (HtmlService) failing in iOS Mail/Safari.
+						</div>
+						<div class="mt-1">
+							Fix: switch response to <span class="text-text">ContentService</span> and redeploy.
+						</div>
+					</li>
+					<li>
+						<span class="text-text">Weird characters in text (ΓÇö / �).</span>
+						<div class="mt-2">
+							Root cause: source text sometimes already mojibaked or gets mangled by iOS mail rendering.
+						</div>
+						<div class="mt-1">
+							Fix direction: aggressive cleaning in generator output (replace ΓÇ* patterns, strip
+							non-ASCII) + keep punctuation plain ASCII.
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="mt-12">
+			<h2 class="font-display text-2xl text-text">Next milestone: make it self-managing</h2>
+			<div class="mt-5 grid gap-4 md:grid-cols-3">
+				<div class="rounded-2xl border border-white/10 bg-panel p-6">
+					<h3 class="font-display text-lg text-text">Milestone A</h3>
+					<p class="mt-2 text-sm text-text-muted">Approvals reliable on iPhone.</p>
+					<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+						<li>Redeploy Apps Script using ContentService</li>
+						<li>Test: tap Hold → must show “OK / Logged decision” reliably</li>
+					</ul>
+				</div>
+
+				<div class="rounded-2xl border border-white/10 bg-panel p-6">
+					<h3 class="font-display text-lg text-text">Milestone B</h3>
+					<p class="mt-2 text-sm text-text-muted">Bins + tuning engine.</p>
+					<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+						<li><code class="text-text">tools/_wisdom_hold.json</code></li>
+						<li><code class="text-text">tools/_wisdom_archive.json</code></li>
+						<li><code class="text-text">tools/_wisdom_reject.json</code></li>
+						<li><code class="text-text">tools/_wisdom_approved.json</code></li>
+					</ul>
+					<p class="mt-4 text-sm text-text-muted">
+						Selection behavior: pull from HOLD occasionally (cooldown), avoid repeats from
+						Archive/Reject, weight toward what gets Approved, keep eastern/mysticism bias (allow
+						occasional Bible/Quran if it performs well).
+					</p>
+				</div>
+
+				<div class="rounded-2xl border border-white/10 bg-panel p-6">
+					<h3 class="font-display text-lg text-text">Milestone C</h3>
+					<p class="mt-2 text-sm text-text-muted">Weekly Wisdom compilation email.</p>
+					<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+						<li>Top approved passages</li>
+						<li>What traditions/styles are trending</li>
+						<li>1 short “practice of the week” derived from approvals</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-12 grid gap-8 md:grid-cols-2">
+			<div class="rounded-2xl border border-white/10 bg-panel p-6">
+				<h2 class="font-display text-xl text-text">How this group can help (proactive)</h2>
+				<p class="mt-3 text-sm text-text-muted">After each email, post quick feedback:</p>
+				<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+					<li>“More like #1 and #3”</li>
+					<li>“Too Stoic / too Abrahamic / more Zen / more Tibetan / more poetry”</li>
+					<li>“Longer excerpts / shorter excerpts”</li>
+					<li>“More practical application line per passage”</li>
+				</ul>
+			</div>
+
+			<div class="rounded-2xl border border-white/10 bg-panel p-6">
+				<h2 class="font-display text-xl text-text">Failure checklist</h2>
+				<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text-muted">
+					<li>
+						If emails stop: check cron +
+						<code class="text-text">tools/_ancient_wisdom_latest.json</code> timestamp.
+					</li>
+					<li>
+						If buttons fail: redeploy Apps Script + confirm token safety + confirm
+						<code class="text-text">APPROVAL_ACTIONS_BASE_URL</code>.
+					</li>
+					<li>
+						If weird characters appear: screenshot the exact line; it’s a cleaning rule to add.
+					</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+</Layout>

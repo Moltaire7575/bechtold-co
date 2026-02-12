@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RowCarousel from '../../components/RowCarousel.astro';
+
+export async function getStaticPaths() {
+	// TODO: Fetch slugs from Supabase at build time (or switch to SSR if needed).
+	return [{ params: { slug: 'cinematic-scholar-protocol' } }];
+}
+
+const { slug } = Astro.params;
+
+// TODO: Replace with Supabase lookup by slug
+const video = {
+	title: 'The Cinematic Scholar Protocol',
+	description:
+		'A research-backed, practical framework for training the body, refining the mind, and aligning the spirit. Built as a self-experiment.',
+	pillar: 'Research',
+	subpillar: 'Shower Science',
+	format: 'Lecture',
+	duration: '22m',
+	difficulty: 2,
+	equipment: ['None'],
+	goals: ['Clarity', 'Recovery', 'Metabolism'],
+	videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0',
+	thumbnailUrl: undefined,
+	tags: ['Evidence', 'Protocol', 'Sleep'],
+};
+
+const related = Array.from({ length: 12 }).map((_, i) => ({
+	title: `Related ${i + 1} — Precision Under Pressure`,
+	duration: `${14 + i}m`,
+	difficulty: (i % 5) + 1,
+	pillar: ['Body', 'Mind', 'Spirit'][i % 3],
+	tags: ['Protocol', 'Clarity'],
+	href: '/library/cinematic-scholar-protocol',
+}));
+---
+
+<Layout title={`${video.title} — bechtold.co`}>
+	<section class="mx-auto max-w-6xl px-4 py-10">
+		<div class="grid gap-8 lg:grid-cols-[1.6fr_1fr]">
+			<div class="overflow-hidden rounded-3xl border border-white/10 bg-black shadow-cinematic">
+				<div class="aspect-video w-full">
+					<iframe
+						class="h-full w-full"
+						src={video.videoUrl}
+						title={video.title}
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+
+			<aside class="space-y-5">
+				<div>
+					<p class="text-xs text-text-muted">/library/{slug}</p>
+					<h1 class="mt-2 font-display text-3xl tracking-tight text-text">{video.title}</h1>
+					<p class="mt-3 text-sm leading-relaxed text-text-muted">{video.description}</p>
+				</div>
+
+				<div class="grid grid-cols-2 gap-3 rounded-3xl border border-white/10 bg-panel p-5 text-sm">
+					<div>
+						<div class="text-text-muted">Pillar</div>
+						<div class="mt-1 text-text">{video.pillar}</div>
+					</div>
+					<div>
+						<div class="text-text-muted">Format</div>
+						<div class="mt-1 text-text">{video.format}</div>
+					</div>
+					<div>
+						<div class="text-text-muted">Duration</div>
+						<div class="mt-1 text-text">{video.duration}</div>
+					</div>
+					<div>
+						<div class="text-text-muted">Difficulty</div>
+						<div class="mt-1 text-text">{video.difficulty}/5</div>
+					</div>
+				</div>
+
+				<div class="flex flex-wrap gap-2">
+					{video.tags.map((t) => (
+						<span class="rounded-full bg-white/5 px-3 py-1 text-xs text-text-muted">{t}</span>
+					))}
+				</div>
+
+				<div class="flex gap-3">
+					<button class="rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition hover:bg-white/90">Save</button>
+					<button class="rounded-full border border-white/15 bg-panel px-5 py-2 text-sm font-medium text-text transition hover:border-white/25">+ Playlist</button>
+				</div>
+			</aside>
+		</div>
+
+		<div class="mt-12">
+			<RowCarousel title="Related" items={related} />
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sign in — bechtold.co">
+	<section class="mx-auto max-w-md px-4 py-16">
+		<h1 class="font-display text-3xl text-text">Sign in</h1>
+		<p class="mt-3 text-text-muted">
+			Auth will be Supabase. For now, this is a placeholder.
+		</p>
+
+		<form class="mt-8 space-y-3 rounded-3xl border border-white/10 bg-panel p-6">
+			<label class="block text-sm text-text-muted">
+				Email
+				<input class="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-text" type="email" placeholder="you@domain.com" />
+			</label>
+			<button class="w-full rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-white/90" type="button">
+				Continue
+			</button>
+			<p class="text-xs text-text-muted">
+				MVP note: admin will be allowlisted by email.
+			</p>
+		</form>
+	</section>
+</Layout>

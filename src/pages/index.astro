@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import RowCarousel from '../components/RowCarousel.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const heroHeadline = 'Train the Body. Refine the Mind. Align the Spirit.';
+const heroSubhead =
+	'A premium library of performance training, physiology, and philosophy—built as a self-experiment.';
+
+const mock = (pillar) =>
+	Array.from({ length: 10 }).map((_, i) => ({
+		title: `${pillar}: Episode ${i + 1} — The Cinematic Scholar Protocol`,
+		duration: `${12 + i}m`,
+		difficulty: (i % 5) + 1,
+		pillar,
+		tags:
+			pillar === 'Body'
+				? ['Sleep', 'Nutrition']
+				: pillar === 'Mind'
+					? ['Clarity', 'Curiosity']
+					: pillar === 'Spirit'
+						? ['Presence', 'Peace']
+						: pillar === 'Research'
+							? ['Shower Science', 'Evidence']
+							: pillar === 'Expeditions'
+								? ['Field Notes', 'Story']
+								: ['Two-Week', 'Experiment'],
+		href: '/library/cinematic-scholar-protocol',
+	}));
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="bechtold.co — Cinematic Scholar">
+	<section class="relative overflow-hidden">
+		<div class="absolute inset-0">
+			<div class="h-full w-full bg-grain" />
+			<div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg" />
+		</div>
+
+		<div class="relative mx-auto max-w-6xl px-4 pb-14 pt-12 md:pb-20 md:pt-16">
+			<div class="max-w-3xl">
+				<p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-panel/60 px-4 py-2 text-xs text-text-muted">
+					<span class="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+					Cinematic Scholar — video-first library (MVP)
+				</p>
+				<h1 class="font-display text-4xl leading-tight tracking-tight text-text md:text-6xl">
+					{heroHeadline}
+				</h1>
+				<p class="mt-5 max-w-2xl text-base leading-relaxed text-text-muted md:text-lg">
+					{heroSubhead}
+				</p>
+
+				<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+					<a
+						href="/library"
+						class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90"
+					>
+						Explore the Library
+					</a>
+					<a
+						href="/experiments"
+						class="inline-flex items-center justify-center rounded-full border border-white/15 bg-panel px-6 py-3 text-sm font-medium text-text transition hover:border-white/25"
+					>
+						Start a Two-Week Experiment
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mx-auto max-w-6xl space-y-10 px-4 py-12">
+		<RowCarousel title="Featured Series" items={mock('Featured')} />
+		<RowCarousel title="Body" items={mock('Body')} />
+		<RowCarousel title="Mind" items={mock('Mind')} />
+		<RowCarousel title="Spirit" items={mock('Spirit')} />
+		<RowCarousel title="Research" items={mock('Research')} />
+		<RowCarousel title="Expeditions" items={mock('Expeditions')} />
+		<RowCarousel title="Two-Week Experiments" items={mock('Experiments')} />
+
+		<section class="mt-6 rounded-3xl border border-white/10 bg-panel p-8">
+			<div class="grid gap-8 md:grid-cols-3">
+				<div>
+					<h3 class="font-display text-lg text-text">Trust cues</h3>
+					<p class="mt-2 text-sm text-text-muted">
+						Research-backed. Practical. Cinematic. Minimal visual noise.
+					</p>
+				</div>
+				<ul class="md:col-span-2 grid gap-3 text-sm text-text-muted">
+					<li class="flex gap-3"><span class="text-accent-gold">•</span>Evidence-first breakdowns ("Shower Science") that don’t waste your time.</li>
+					<li class="flex gap-3"><span class="text-accent-cyan">•</span>Protocols you can actually run as self-experiments.</li>
+					<li class="flex gap-3"><span class="text-accent-gold">•</span>A library built for browsing: rows, tags, and clean cards.</li>
+				</ul>
+			</div>
+		</section>
+	</section>
 </Layout>

@@ -1,0 +1,39 @@
+---
+import VideoCard, { type VideoCardProps } from './VideoCard.astro';
+
+export type RowCarouselProps = {
+	title: string;
+	items: VideoCardProps[];
+	ctaHref?: string;
+	ctaLabel?: string;
+};
+
+const { title, items, ctaHref = '/library', ctaLabel = 'See all' } =
+	Astro.props as RowCarouselProps;
+---
+
+<section class="space-y-3">
+	<div class="flex items-end justify-between gap-4">
+		<h2 class="font-display text-lg tracking-tight text-text">{title}</h2>
+		<a class="text-sm text-text-muted transition hover:text-text" href={ctaHref}>{ctaLabel}</a>
+	</div>
+
+	<div class="relative">
+		<div class="no-scrollbar flex gap-4 overflow-x-auto pb-2">
+			{items.map((item) => (
+				<VideoCard {...item} />
+			))}
+		</div>
+		<div class="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-bg to-transparent" />
+		<div class="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-bg to-transparent" />
+	</div>
+</section>
+
+<style>
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar {
+		scrollbar-width: none;
+	}
+</style>

@@ -14,12 +14,9 @@ const { title = "Steve Bechtold" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-
   <body>
     <SiteHeader currentPath={Astro.url.pathname} />
-    <main class="page">
-      <slot />
-    </main>
+    <slot />
     <SiteFooter />
   </body>
 </html>

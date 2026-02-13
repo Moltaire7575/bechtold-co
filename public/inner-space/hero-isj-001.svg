@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0A1224"/>
+      <stop offset="1" stop-color="#062B3A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="28%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#35D0FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#35D0FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="78%" cy="70%" r="70%">
+      <stop offset="0" stop-color="#69F0C9" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#69F0C9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#35D0FF"/>
+      <stop offset="1" stop-color="#69F0C9"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#glow2)"/>
+
+  <!-- star field -->
+  <g fill="#CFE9FF" opacity="0.55">
+    <circle cx="150" cy="170" r="2"/>
+    <circle cx="260" cy="120" r="1.4"/>
+    <circle cx="510" cy="210" r="1.6"/>
+    <circle cx="820" cy="140" r="1.8"/>
+    <circle cx="1160" cy="210" r="1.3"/>
+    <circle cx="1350" cy="160" r="2"/>
+    <circle cx="1420" cy="330" r="1.2"/>
+    <circle cx="220" cy="520" r="1.2"/>
+    <circle cx="420" cy="620" r="1.6"/>
+    <circle cx="720" cy="720" r="1.2"/>
+    <circle cx="980" cy="560" r="1.4"/>
+    <circle cx="1280" cy="680" r="1.8"/>
+  </g>
+
+  <!-- glass panel -->
+  <g filter="url(#shadow)">
+    <rect x="110" y="120" width="1380" height="660" rx="56" fill="#0A0F1E" opacity="0.6" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+    <path d="M110 260 C 420 190, 740 210, 1490 150" fill="none" stroke="url(#accent)" stroke-opacity="0.35" stroke-width="3"/>
+  </g>
+
+  <!-- mascot (smaller, right) -->
+  <g transform="translate(1225 265)" filter="url(#shadow)">
+    <ellipse cx="0" cy="60" rx="120" ry="112" fill="#0C1430" stroke="#2A3A6A" stroke-width="5"/>
+    <path d="M -75 65 C -65 20, 65 20, 75 65 C 62 112, -62 112, -75 65 Z" fill="#091B2C" stroke="url(#accent)" stroke-width="4"/>
+    <g opacity="0.7">
+      <circle cx="-26" cy="78" r="5" fill="#CFE9FF"/>
+      <circle cx="26" cy="78" r="5" fill="#CFE9FF"/>
+      <path d="M -18 98 C -6 108, 6 108, 18 98" fill="none" stroke="#CFE9FF" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(0 155)">
+      <rect x="-74" y="0" width="148" height="130" rx="46" fill="#0C1430" stroke="#2A3A6A" stroke-width="5"/>
+      <g transform="translate(0 12)">
+        <path d="M -52 32 C -30 18, -18 18, -8 34 C -20 46, -32 48, -52 32 Z" fill="url(#accent)"/>
+        <path d="M 52 32 C 30 18, 18 18, 8 34 C 20 46, 32 48, 52 32 Z" fill="url(#accent)"/>
+        <circle cx="0" cy="34" r="11" fill="#070A12" stroke="#35D0FF" stroke-width="3"/>
+      </g>
+      <rect x="-38" y="58" width="76" height="44" rx="14" fill="#0B2B3A" stroke="#35D0FF" stroke-width="3" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- title lockup -->
+  <g transform="translate(170 260)">
+    <text x="0" y="0" fill="#9BA3AF" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="16" letter-spacing="2">INNER SPACE JOURNEY · ISJ-001</text>
+    <text x="0" y="72" fill="#F2F2F2" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="64" font-weight="700">The Player and the Character</text>
+    <rect x="0" y="100" width="520" height="4" fill="url(#accent)" opacity="0.9" rx="2"/>
+    <text x="0" y="150" fill="#9BA3AF" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="18">Identity as a tool; awareness as the space it appears in.</text>
+  </g>
+</svg>

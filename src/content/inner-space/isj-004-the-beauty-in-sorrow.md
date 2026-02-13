@@ -5,7 +5,7 @@ subtitle: "Mist, memory, and the soft intelligence of change"
 date: 2026-02-13
 tags: ["vision-quest", "sorrow", "change", "practice", "awareness"]
 excerpt: "My sorrow and fears were like the mist—dense, cold, obstructive… and beautiful."
-heroImage: "/inner-space/astronaut-bowtie.svg"
+heroImage: "/inner-space/hero-isj-004.svg"
 draft: false
 ---
 

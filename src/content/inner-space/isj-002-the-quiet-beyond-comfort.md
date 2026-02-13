@@ -5,7 +5,7 @@ subtitle: "Peace isn’t tied to pleasure"
 date: 2026-02-13
 tags: ["vision-quest", "peace", "comfort", "awareness", "practice"]
 excerpt: "During a Vision Quest—no food, no water, no company but my own thoughts—comfort disappeared. And yet, peace appeared."
-heroImage: "/inner-space/astronaut-bowtie.svg"
+heroImage: "/inner-space/hero-isj-002.svg"
 draft: false
 ---
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0A1224"/>
+      <stop offset="1" stop-color="#071A2B"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="22%" cy="70%" r="65%">
+      <stop offset="0" stop-color="#FFB86B" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#FFB86B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyan" cx="75%" cy="30%" r="65%">
+      <stop offset="0" stop-color="#35D0FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#35D0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#35D0FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#dawn)"/>
+  <rect width="1600" height="900" fill="url(#cyan)"/>
+
+  <!-- flowing wave lines -->
+  <g fill="none" opacity="0.25" stroke="url(#accent)" stroke-width="2">
+    <path d="M0 520 C 260 470, 520 560, 820 510 C 1060 470, 1290 520, 1600 480"/>
+    <path d="M0 580 C 260 530, 520 620, 820 570 C 1060 530, 1290 580, 1600 540"/>
+    <path d="M0 640 C 260 590, 520 680, 820 630 C 1060 590, 1290 640, 1600 600"/>
+  </g>
+
+  <!-- glass panel -->
+  <g filter="url(#shadow)">
+    <rect x="110" y="120" width="1380" height="660" rx="56" fill="#0A0F1E" opacity="0.58" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+  </g>
+
+  <!-- title lockup -->
+  <g transform="translate(170 260)">
+    <text x="0" y="0" fill="#9BA3AF" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="16" letter-spacing="2">INNER SPACE JOURNEY · ISJ-003</text>
+    <text x="0" y="72" fill="#F2F2F2" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="64" font-weight="700">One Can Hear the Sunrise</text>
+    <rect x="0" y="100" width="520" height="4" fill="url(#accent)" opacity="0.9" rx="2"/>
+    <text x="0" y="150" fill="#9BA3AF" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="18">When perception and presence blend.</text>
+  </g>
+
+  <!-- minimal sun mark -->
+  <g transform="translate(1340 690)" opacity="0.8">
+    <circle cx="0" cy="0" r="42" fill="#0C1430" stroke="url(#accent)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="14" fill="#FFB86B" opacity="0.9"/>
+    <path d="M-22 0 H22" stroke="#35D0FF" stroke-width="3" opacity="0.75"/>
+  </g>
+</svg>

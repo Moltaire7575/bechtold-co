@@ -5,7 +5,7 @@ subtitle: "When perception and presence blend"
 date: 2026-02-13
 tags: ["awareness", "presence", "poetry", "practice"]
 excerpt: "When awareness opens, the boundary thins—until perception flows softly through presence and the two become one."
-heroImage: "/inner-space/astronaut-bowtie.svg"
+heroImage: "/inner-space/hero-isj-003.svg"
 draft: false
 ---
 

@@ -1,0 +1,46 @@
+---
+const { href, id, title, subtitle, date, excerpt, tags, heroImage } = Astro.props;
+---
+
+<a
+	href={href}
+	class="group relative overflow-hidden rounded-3xl border border-white/10 bg-panel/60 transition hover:border-white/20"
+>
+	<div class="relative">
+		{heroImage && (
+			<img
+				src={heroImage}
+				alt=""
+				class="h-44 w-full object-cover opacity-90 transition group-hover:opacity-100"
+				loading="lazy"
+			/>
+		)}
+		<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+		<div class="absolute bottom-3 left-4 right-4">
+			<div class="text-xs uppercase tracking-wide text-text-muted">{id} · {date}</div>
+			<div class="mt-1 text-lg font-semibold text-text">{title}</div>
+			{subtitle && <div class="mt-1 text-sm text-text-muted">{subtitle}</div>}
+		</div>
+	</div>
+
+	<div class="p-5">
+		<p class="text-sm text-text-muted">{excerpt}</p>
+		<div class="mt-4 flex flex-wrap gap-2">
+			{tags?.slice(0, 4).map((t) => (
+				<span class="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-xs text-text-muted">
+					{t}
+				</span>
+			))}
+			{tags?.length > 4 && (
+				<span class="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-xs text-text-muted">
+					+{tags.length - 4}
+				</span>
+			)}
+		</div>
+	</div>
+
+	<!-- neon edge -->
+	<div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100">
+		<div class="absolute -inset-px rounded-3xl bg-gradient-to-r from-cyan-400/20 via-white/5 to-emerald-300/20"></div>
+	</div>
+</a>

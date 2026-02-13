@@ -5,7 +5,7 @@ subtitle: "Identity as a tool; awareness as the space it appears in"
 date: 2026-02-12
 tags: ["identity", "consciousness", "dreams", "awareness", "practice"]
 excerpt: "When identity tightens, life gets heavy. When it loosens—even a little—experience becomes breathable again."
-heroImage: "/inner-space/astronaut-bowtie.svg"
+heroImage: "/inner-space/hero-isj-001.svg"
 draft: false
 ---
 

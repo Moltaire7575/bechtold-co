@@ -30,3 +30,26 @@ body {
 	outline: 2px solid rgba(47,168,198,0.65);
 	outline-offset: 2px;
 }
+
+/* ===== Global Layout ===== */
+.page{max-width:1120px;margin:0 auto;padding:28px 20px 0}
+
+/* ===== Site Header ===== */
+.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(9,12,18,.72);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header__inner{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand__name{color:#fff;font-weight:650;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.brand__tag{color:rgba(255,255,255,.55);font-size:12px}
+.nav__list{list-style:none;display:flex;gap:12px;margin:0;padding:0;flex-wrap:wrap}
+.nav__link{display:inline-flex;align-items:center;padding:8px 10px;border-radius:999px;text-decoration:none;color:rgba(255,255,255,.75);border:1px solid transparent}
+.nav__link:hover{color:#fff;border-color:rgba(255,255,255,.10);background:rgba(255,255,255,.04)}
+.nav__link.is-active{color:#fff;border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.06)}
+
+/* ===== Site Footer ===== */
+.site-footer{margin-top:56px;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.22)}
+.site-footer__inner{max-width:1120px;margin:0 auto;padding:22px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.site-footer__brand{color:#fff;font-weight:600}
+.site-footer__meta{color:rgba(255,255,255,.6);font-size:13px;margin-top:6px}
+.site-footer__right{display:flex;gap:14px}
+.site-footer__link{color:rgba(255,255,255,.7);text-decoration:none}
+.site-footer__link:hover{color:#fff}

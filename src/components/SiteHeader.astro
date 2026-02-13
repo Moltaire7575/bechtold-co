@@ -1,0 +1,36 @@
+---
+const { currentPath = Astro.url.pathname } = Astro.props;
+
+const links = [
+  { href: '/library', label: 'Library' },
+  { href: '/inner-space', label: 'Inner Space' },
+  { href: '/research', label: 'Research' },
+  { href: '/coaching', label: 'Coaching' },
+  { href: '/about', label: 'About' },
+];
+
+function isActive(href) {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
+---
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Home">
+      <span class="brand__name">Steve Bechtold</span>
+      <span class="brand__tag">Library</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        {links.map((l) => (
+          <li class="nav__item">
+            <a class:list={["nav__link", isActive(l.href) && "is-active"]} href={l.href}>
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

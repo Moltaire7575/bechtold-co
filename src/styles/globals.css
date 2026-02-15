@@ -53,3 +53,8 @@ body {
 .site-footer__right{display:flex;gap:14px}
 .site-footer__link{color:rgba(255,255,255,.7);text-decoration:none}
 .site-footer__link:hover{color:#fff}
+
+/* ===== Global Dark Theme Override (site-wide) ===== */
+:root { color-scheme: dark; }
+html, body { background:#05070c; color: rgba(255,255,255,.92); }
+a { color: inherit; }

@@ -74,3 +74,7 @@ main, .page, #app { background: transparent !important; }
 *[style*="background: rgb(255, 255, 255)"], *[style*="background:rgb(255,255,255)"] {
   background: transparent !important;
 }
+
+/* ===== Kill white gutters around carousels/rows ===== */
+body { overflow-x: hidden; }
+main, section { background: transparent; }

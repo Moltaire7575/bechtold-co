@@ -58,3 +58,19 @@ body {
 :root { color-scheme: dark; }
 html, body { background:#05070c; color: rgba(255,255,255,.92); }
 a { color: inherit; }
+
+/* ===== Strong dark enforcement (beats earlier light scaffold) ===== */
+body { background:#05070c !important; }
+main, .page, #app { background: transparent !important; }
+
+/* If any component uses a "surface" style, force dark */
+.surface, .panel, .card-surface {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+/* Defensive: prevent any pure-white backgrounds bleeding through */
+*[style*="background: #fff"], *[style*="background:#fff"],
+*[style*="background: rgb(255, 255, 255)"], *[style*="background:rgb(255,255,255)"] {
+  background: transparent !important;
+}

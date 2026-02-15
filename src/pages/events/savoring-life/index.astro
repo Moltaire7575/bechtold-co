@@ -3,58 +3,85 @@ import Layout from "../../../layouts/Layout.astro";
 ---
 
 <Layout title="Savoring Life (Season 1) | Events">
-  <section class="mx-auto max-w-6xl px-5 pt-10">
-    <p class="text-xs uppercase tracking-[0.18em] text-white/60">Events / Season 1</p>
-    <h1 class="mt-3 text-4xl font-semibold text-white md:text-6xl">Savoring Life</h1>
-    <p class="mt-4 max-w-3xl text-lg text-white/70">
-      A live speaking series about conscious living through the gateway of the senses—
-      designed to be hosted as a repeatable experience.
-    </p>
-
-    <div class="mt-8 grid gap-4 md:grid-cols-3">
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-        <p class="text-xs uppercase tracking-[0.18em] text-white/60">Body</p>
-        <h2 class="mt-2 text-xl font-semibold text-white">Savoring Life</h2>
-        <p class="mt-2 text-sm text-white/70">
-          Taste and sensation as training ground for attention and gratitude.
-        </p>
-        <a class="mt-4 inline-block text-sm text-white no-underline hover:underline" href="/events/savoring-life/module-1">
-          Module 1 → 
-        </a>
-      </div>
-
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-5 opacity-70">
-        <p class="text-xs uppercase tracking-[0.18em] text-white/60">Mind</p>
-        <h2 class="mt-2 text-xl font-semibold text-white">Cultivating Beauty</h2><p class="mt-2 text-sm text-white/70">
-          Seeing the extraordinary hidden inside ordinary life.
-        </p>
-        <p class="mt-4 text-xs text-white/50">Coming soon</p>
-      </div>
-
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-5 opacity-70">
-        <p class="text-xs uppercase tracking-[0.18em] text-white/60">Spirit</p>
-        <h2 class="mt-2 text-xl font-semibold text-white">Embracing Presence</h2>
-        <p class="mt-2 text-sm text-white/70">
-          Depth of awareness and meaning in the present moment.
-        </p>
-        <p class="mt-4 text-xs text-white/50">Coming soon</p>
-      </div>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0"><img src="/images/events/savoring-life-hero.png" alt="" class="h-full w-full object-cover opacity-80" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black"></div>
     </div>
 
-    <div class="mt-10 rounded-2xl border border-white/10 bg-black/30 p-6">
-      <h3 class="text-lg font-semibold text-white">Format</h3>
-      <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
-        <li><span class="text-white/90">Keynote talk</span> (overview of the full arc) — coming soon</li>
-        <li><span class="text-white/90">Three rotating modules</span> that can be hosted standalone or paired</li>
-      </ul>
+    <div class="relative mx-auto max-w-6xl px-5 pb-10 pt-14 md:pb-14 md:pt-20">
+      <p class="text-xs uppercase tracking-[0.18em] text-white/70">Events / Season 1</p>
+      <h1 class="mt-4 text-4xl font-semibold text-white md:text-6xl">Savoring Life</h1>
+      <p class="mt-5 max-w-3xl text-lg text-white/75">
+        Awakening the Senses: a journey through body, mind, and spirit—designed to be hosted as a repeatable experience.
+      </p>
 
-      <div class="mt-5 flex flex-wrap gap-3">
-        <a href="/contact" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white no-underline hover:bg-white/15">
-          Host this series (inquire)
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/events/savoring-life/module-1" class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white no-underline hover:bg-white/15">
+          Start with Module 1 →
+        </a>
+        <a href="/contact" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 no-underline hover:bg-white/5">
+          Host this season (inquire)
         </a>
         <a href="/events" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 no-underline hover:bg-white/5">
           Back to Events
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-14 pt-10">
+    <p class="text-xs uppercase tracking-[0.18em] text-white/60">The three pillars</p>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+      <a href="/events/savoring-life/module-1" class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 no-underline">
+        <div class="relative h-44">
+          <img src="/images/events/module-1-hero.png" alt="" class="h-full w-full object-cover opacity-90" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <div class="text-xs uppercase tracking-[0.18em] text-white/70">Body</div>
+            <div class="mt-1 text-lg font-semibold text-white">Module 1: Savoring Life</div>
+            <div class="mt-1 text-sm text-white/75">The Art of Flavor and Awareness</div>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-sm text-white/70">
+            Taste and sensation as training ground for attention, gratitude, and deeper experience.
+          </p>
+          <p class="mt-4 text-sm text-white group-hover:underline">Open module →</p>
+        </div>
+      </a>
+
+      <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 opacity-80">
+        <div class="relative h-44">
+          <img src="/images/events/module-2-hero.png" alt="" class="h-full w-full object-cover opacity-90" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <div class="text-xs uppercase tracking-[0.18em] text-white/70">Mind</div>
+            <div class="mt-1 text-lg font-semibold text-white">Module 2: Cultivating Beauty</div>
+            <div class="mt-1 text-sm text-white/65">Coming soon</div>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-sm text-white/70">
+            Expanding perception through curiosity and wonder—seeing the extraordinary in the ordinary.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 opacity-80">
+        <div class="relative h-44">
+          <img src="/images/events/module-3-hero.png" alt="" class="h-full w-full object-cover opacity-90" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-4 left-4">
+            <div class="text-xs uppercase tracking-[0.18em] text-white/70">Spirit</div><div class="mt-1 text-lg font-semibold text-white">Module 3: Embracing Presence</div>
+            <div class="mt-1 text-sm text-white/65">Coming soon</div>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-sm text-white/70">
+            Depth of awareness and meaning in the present moment—stillness as a skill.
+          </p>
+        </div>
       </div>
     </div>
   </section>

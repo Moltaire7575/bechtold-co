@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact — bechtold.co">
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/site/coaching-hero.png" alt="" class="h-full w-full object-cover opacity-80" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-5 pb-10 pt-14 md:pb-12 md:pt-20">
+      <p class="text-xs uppercase tracking-[0.18em] text-white/70">Contact</p>
+      <h1 class="mt-4 text-4xl font-semibold text-white md:text-6xl">Inquiries</h1>
+      <p class="mt-5 max-w-3xl text-lg text-white/75">
+        Host an event, collaborate, or ask a question. Send a short note with your venue/community, location, and ideal date.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-black">
+    <div class="mx-auto max-w-6xl px-5 py-10">
+      <div class="grid gap-5 md:grid-cols-3">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-5 md:col-span-2">
+          <div class="text-xs uppercase tracking-[0.18em] text-white/60">Email</div>
+          <p class="mt-3 text-sm text-white/75">
+            For now, inquiries go through email (a form can come later once the library is populated).
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a
+              href="mailto:steve@bechtold.co?subject=Event%20inquiry%20—%20Savoring%20Life&body=Venue%2Fcommunity%3A%0ALocation%3A%0AIdeal%20date%3A%0AAudience%20size%3A%0AWhat%20you%E2%80%99re%20looking%20for%3A%0A"
+              class="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white no-underline hover:bg-white/15"
+            >
+              Email Steve →
+            </a>
+
+            <a
+              href="/events"
+              class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 no-underline hover:bg-white/5"
+            >
+              Back to Events →
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
+          <div class="text-xs uppercase tracking-[0.18em] text-white/60">What to include</div>
+          <ul class="mt-3 space-y-2 text-sm text-white/75">
+            <li>Venue/community + city</li>
+            <li>Proposed date range</li>
+            <li>Audience size + vibe</li>
+            <li>Desired format (single talk vs modules)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-3xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs uppercase tracking-[0.18em] text-white/60">Note</div>
+        <p class="mt-2 text-sm text-white/75">
+          If you don’t have a <code class="rounded bg-black/40 px-1 py-0.5">steve@bechtold.co</code> email set up yet,
+          tell me what email you want to use and I’ll wire it here.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

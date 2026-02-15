@@ -16,7 +16,9 @@ const { title = "Steve Bechtold" } = Astro.props;
   </head>
   <body>
     <SiteHeader currentPath={Astro.url.pathname} />
-    <slot />
-    <SiteFooter />
+    <main class="bg-black">
+  <slot />
+</main>
+<SiteFooter />
   </body>
 </html>

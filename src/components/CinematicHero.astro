@@ -1,0 +1,29 @@
+---
+const {
+  label = "",
+  title = "",
+  subtitle = "",
+  imageSrc = "",
+} = Astro.props;
+---
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0">
+    {imageSrc ? (
+      <img
+        src={imageSrc}
+        alt=""
+        class="h-full w-full object-cover opacity-85"
+        loading="eager"
+      />
+    ) : (
+      <div class="h-full w-full bg-black"></div>
+    )}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-5 pb-10 pt-14 md:pb-12 md:pt-20">
+    {label && <p class="text-xs uppercase tracking-[0.18em] text-white/70">{label}</p>}
+    {title && <h1 class="mt-4 text-4xl font-semibold text-white md:text-6xl">{title}</h1>}
+    {subtitle && <p class="mt-5 max-w-3xl text-lg text-white/75">{subtitle}</p>}
+  </div>
+</section>

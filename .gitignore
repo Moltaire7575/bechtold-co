@@ -31,3 +31,6 @@ _tmp_photos/
 _tmp_site_pack/
 _tmp_photos/
 *.zip
+
+# source PDFs (do not commit)
+_source_pdfs/
